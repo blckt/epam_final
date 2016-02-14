@@ -1,0 +1,16 @@
+@media screen and (max-width: 440px) {
+  body {
+    background-color: white;
+  }
+
+  #wrapper header div .right_side .search {
+    right: 18vw;
+  }
+
+  #main .inspiration button {
+    width: 10vw;
+  }
+  #main .inspiration .right {
+    left: 70vw;
+  }
+}

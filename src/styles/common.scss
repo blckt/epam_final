@@ -1,0 +1,24 @@
+@font-face{
+    font-family: latoReg;
+    src: url(../fonts/lato/Lato-Regular.ttf)
+}
+@font-face{
+    font-family: latoBold;
+    src: url(../fonts/lato/Lato-Bold.ttf)
+}
+body{
+    overflow-x: hidden;
+   
+}
+@font-face{
+    font-family: latoItalic;
+    src: url(../fonts/lato/Lato-Italic.ttf)
+}
+body{
+	font-family: latoReg;
+	line-height: 1.7;
+	
+	nav{
+		line-height: 1.4;
+	}
+}
