@@ -23,7 +23,7 @@ function getUrlState(hash,routes){
         state=hash.replace('#','');
    } 
    else{
-       state=routes[0];
+       state=routes[0]||'home';
    }
     switch (state){
         case 'home':{
@@ -35,7 +35,7 @@ function getUrlState(hash,routes){
             break;
         }
         case 'all':{
-            initContent('views/all.html').then(function(){
+            initContent('../../Views/all.html').then(function(){
                      history.pushState({param:'value'},'','all');
                      slider();
             });

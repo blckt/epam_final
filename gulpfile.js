@@ -40,13 +40,12 @@ browserSync.use(spa({
 gulp.task('watch',['styles'],function () {
 
 
-   
     browserSync.init({
         server: {
             baseDir:'.',
-            open:false
+            port:8081
         },
-        
+        port:8081
     });
 
     gulp.watch("src/styles/*.scss", ['styles']);

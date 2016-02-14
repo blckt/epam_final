@@ -1,84 +1,39 @@
 #main{
+    
+   
        .container{
         margin: 0;
     }
 }
+#wrapper{
+    
+}
 #all{
   &.container{
       margin-top: 10px;
-  }
-  .inpsiration{
+      .inspiration{
+          margin-top:4vh;
+          margin-bottom:5%;
       .slide{
           
       }
+      .right{
+          left:93.5%;
+      }
+  }
+  }
+  .subheader-big{
+      margin-top:6vh;
+      text-align:center
+      ;
   }
   
   
+  
     .breadcrumbs{
+        
         height: 50px;
         width: 100%;
         background-color: yellow;
-    }
-    .collection{
-        .itemlist{
-         text-align: center;
- 
-         margin: 4vh 0 0;
-            .items{
-                   display: flex;
-               margin-top: 7.5vh;
-               flex-direction: row;
-                 justify-content: space-between;
-                .item{
-                    border: 1px solid black;
-                     display: flex;
-                height: 24vh;
-                width: 14vw; 
-                  margin: auto 0;
-                justify-content: center;
-                align-items: center;
-                div{
-                }
-                  &:first-child{
-                div{
-                    background-color: #a3a3a3;                  
-                        width: 100%;
-                        height: 40%;
-                   
-                    }
-                }
-                      &:nth-child(2){
-                div{
-                    background-color: #a3a3a3;                  
-                        width: 60%;
-                        height: 100%;
-                
-                      
-                        
-                    }
-                }
-                   &:nth-child(3){
-                div{
-                    background-color: #a3a3a3;                  
-                        width: 100%;
-                        height: 85%;
-                
-                      
-                        
-                    }
-                }
-                 &:nth-child(4){
-                div{
-                    background-color: #a3a3a3;                  
-                        width: 95%;
-                        height: 100%;
-                
-                      
-                        
-                    }
-                }
-                }
-            }
-        }
     }
 }
