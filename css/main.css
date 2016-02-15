@@ -50,7 +50,7 @@ body {
     width: 90px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   #wrapper {
     position: absolute;
     left: 6.9%;
@@ -405,7 +405,7 @@ footer .social .icon-list .instagram {
   display: inline-block;
   height: 125px;
   background-color: #606060;
-  color: white;
+  background-image: url("../img/placeholder/200x120.png");
   width: 200px;
   position: relative;
   left: 0;
@@ -414,7 +414,7 @@ footer .social .icon-list .instagram {
 .inspiration button {
   position: relative;
   z-index: 333;
-  top: -128px;
+  top: -135px;
   height: 128px;
   width: 40px;
   background-color: #dbdbdb;

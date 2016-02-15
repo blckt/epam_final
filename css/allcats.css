@@ -16,8 +16,92 @@
   margin-top: 6vh;
   text-align: center;
 }
-#all .breadcrumbs {
-  height: 50px;
+#all .collection {
+  margin-top: 4%;
+}
+#all .pricelist {
+  margin-top: 44px;
+  margin-bottom: 20%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#all .pricelist div {
+  width: 17%;
+}
+#all .pricelist div h3 {
+  text-align: center;
+}
+#all .pricelist div span {
+  position: relative;
+  left: 33%;
+}
+#all .itemlist {
+  text-align: center;
+}
+#all .itemlist .items {
+  margin-top: 5%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  background-color: yellow;
+  height: 100%;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#all .itemlist .items .item {
+  width: 17%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #a3a3a3;
+  height: 250px;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#all .itemlist .items .item div {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+#all .itemlist .items .item:first-child div {
+  background-image: url("../img/placeholder/1200x600.png");
+  height: 35%;
+}
+#all .itemlist .items .item:nth-child(2) div {
+  background-image: url("../img/placeholder/600x1200.png");
+  width: 65%;
+  height: 85%;
+}
+#all .itemlist .items .item:nth-child(3) div {
+  background-image: url("../img/placeholder/600x600.png");
+  height: 85%;
+}
+#all .itemlist .items .item:nth-child(4) div {
+  background-image: url("../img/placeholder/550x700.png");
+  width: 90%;
+  height: 100%;
+}
+#all .breadcrumbs {
+  height: 40px;
+  width: 100%;
+  margin-top: 2%;
+  font-family: latoReg;
+}
+#all .breadcrumbs ul li {
+  display: inline-block;
+}
+#all .breadcrumbs ul li:not(:first-child):before {
+  content: '/ ';
+}
+#all .breadcrumbs ul li:not(:first-child) a {
+  position: relative;
+  left: 2%;
 }

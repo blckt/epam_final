@@ -1,10 +1,6 @@
 
 //init page & history api
 (function () {
-  console.log(getRoutes());  
-//   initContent('main.html').then(function(){
-//      slider();
-//   })
     getUrlState(null,getRoutes());
 })();
 
@@ -12,20 +8,20 @@ window.onhashchange=function(){
     getUrlState(decodeURI(window.location.hash,null));
 }
 function  getRoutes() {
-var url= window.location.href;
-var routes=url.replace(/(https?):\/\/.*:?[1234567890]?\//,'');
-return routes.split(/\//);
+var url= window.location.pathname;
+return url.split(/\//);
 
 }
 function getUrlState(hash,routes){
+
    var state;
    if(hash){
         state=hash.replace('#','');
    } 
    else{
-       state=routes[0]||'home';
+       state=routes[1]||'home';
    }
-    switch (state){
+    switch (state.toLowerCase()){
         case 'home':{
             initContent('main.html').then(function(){
                 slider(); 
