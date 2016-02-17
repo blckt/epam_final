@@ -8,35 +8,63 @@ window.onhashchange=function(){
     getUrlState(decodeURI(window.location.hash,null));
 }
 function  getRoutes() {
-var url= window.location.pathname;
+    console.log(window.location.href);
+var url= window.location.href.replace(/https?:\/\/\S*:\d*\//,'');
+
 return url.split(/\//);
 
 }
 function getUrlState(hash,routes){
+console.log(routes);
 
    var state;
+   var id;
    if(hash){
-        state=hash.replace('#','');
+        hash=hash.replace('#','');
+        state=hash.split(/\//)[0];
+        console.log(hash.split(/\//));
+        if(hash.split(/\//).length>1){
+            id=hash.split(/\//)[1];
+        }
+        
    } 
    else{
-       state=routes[1]||'home';
+       state=routes[0]||'home';
+      if(routes.length>1){
+          id=routes[1];
+      }
    }
+
     switch (state.toLowerCase()){
         case 'home':{
-            initContent('main.html').then(function(){
+            initContent('../main.html').then(function(){
                 slider(); 
-            history.pushState({param:'value'},'','home');
+            history.pushState({param:'value'},'','/home');
            
             })
             break;
         }
         case 'all':{
             initContent('../../Views/all.html').then(function(){
-                     history.pushState({param:'value'},'','all');
+                     history.pushState({param:'value'},'TITLE','/all');
                      slider();
             });
             
             break;
+        }
+           case 'pdp':{
+            initContent('../../Views/pdp.html').then(function(){
+                     history.pushState({param:'value'},'','../pdp/'+id);
+                   
+            });
+            
+            break;
+        }
+        default:{
+                initContent('../../Views/404.html').then(function(){
+                     history.pushState({param:'value'},'','/404');
+                     
+            });
         }
     }
 }
