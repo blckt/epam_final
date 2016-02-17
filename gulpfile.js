@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     del = require('del'),
     spa=require('browser-sync-spa');
-    
+   
 var browserSync = require('browser-sync').create();
 
 gulp.task('styles', function () {
