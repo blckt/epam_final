@@ -26,7 +26,9 @@
             }
             
             #sizes{
-                margin: 40px;
+                  margin: 40px 35%;
+         padding: 10px 0;
+            transition :border 1s;
                 input[type="radio"]{
                     display: none;
                 }

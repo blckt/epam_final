@@ -23,7 +23,9 @@
   background-color: limegreen;
 }
 #item #descr #sizes {
-  margin: 40px;
+  margin: 40px 35%;
+  padding: 10px 0;
+  transition: border 1s;
 }
 #item #descr #sizes input[type="radio"] {
   display: none;
