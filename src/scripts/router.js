@@ -53,6 +53,7 @@ function getUrlState(hash, routes) {
             initContent('../../Views/pdp.html').then(function () {
                 initProductDetails(id).then(function (item) {
                 populateProductPage(item);
+                pdpInit();
                 })
                 history.pushState({ param: 'value' }, '', '../pdp/' + id);
 
@@ -110,6 +111,31 @@ function populateProductPage(object) {
         var pr=document.querySelector('.preview');
            pr.appendChild(img);
     }
+    //populate description
+    var details=document.querySelector('#descr');
+    var h2=details.querySelector('div h2');
+    h2.innerHTML=object.name.toUpperCase()
+    //article
+    details.querySelector(':nth-child(2)').innerHTML="Article number : "+object.article;
+    //price
+    details.querySelector(':nth-child(3)').innerHTML="&#8364; "+object.price;
+  //description
+        details.querySelector(':nth-child(4)').innerHTML=object.descr;
+       //sizes
+       for(var i=0;i<object.size.length;i++){
+            //.innerHTML=object.size[0];
+          var input=document.createElement('input');
+          input.type="radio";
+          input.name="size";
+          input.value=object.size[i];
+          input.id="size"+object.size[i];
+           var label=document.createElement('label');
+           label.htmlFor="size"+object.size[i];
+           label.innerHTML=object.size[i];
+        var sizes=document.querySelector('#sizes');
+         sizes.appendChild(input);
+         sizes.appendChild(label);
+       }
     
     }
 function initContent(state) {

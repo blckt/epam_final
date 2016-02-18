@@ -1,5 +1,46 @@
+#item #descr {
+  text-align: center;
+  margin-top: 70px;
+}
+#item #descr div:nth-child(4) {
+  width: 620px;
+  margin: 50px auto;
+}
+#item #descr div h3 {
+  text-align: center;
+}
+#item #descr input[type="button"] {
+  outline: none;
+  border: none;
+  width: 174px;
+  height: 53px;
+  font-family: latoReg;
+  font-size: 11px;
+  background-color: #f68236;
+  transition: background-color 1s;
+}
+#item #descr input[type="button"].added {
+  background-color: limegreen;
+}
+#item #descr #sizes {
+  margin: 40px;
+}
+#item #descr #sizes input[type="radio"] {
+  display: none;
+}
+#item #descr #sizes label {
+  display: inline-block;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  line-height: 40px;
+}
+#item #descr #sizes input[type="radio"]:checked + label {
+  background-color: lightgray;
+}
 #item .images {
-  width: 90%;
+  width: 80%;
   margin: auto;
   height: 600px;
   display: -webkit-flex;
@@ -14,7 +55,7 @@
 }
 #item .images .main {
   width: 85%;
-  margin-left: 120px;
+  margin-left: 10%;
   min-width: 85%;
 }
 #item .images .main img {
