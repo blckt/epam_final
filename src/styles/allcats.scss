@@ -118,27 +118,5 @@ $dist:'../img/placeholder/';
       }
   }
   
-    .breadcrumbs{
-        
-        ul{
-        
-           li{
-                display:inline-block;
-                &:not(:first-child){
-                &:before{
-                    content:'/ ';
-                    
-                }
-                a{
-                    position:relative;
-                    left:2%;
-                }
-            } 
-           }
-        }
-        height: 40px;
-        width: 100%;
-        margin-top:2%;
-        font-family:latoReg;
-    }
+   
 }

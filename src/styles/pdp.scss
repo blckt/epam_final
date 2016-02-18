@@ -1,0 +1,53 @@
+#item{
+    .images{
+       
+        width: 90%;
+        margin: auto;
+        height: 600px;
+        display: flex;
+        align-content: flex-end;
+    
+        align-items: flex-end;
+     .main{
+ width: 85%;
+ margin-left: 120px;
+              min-width: 85%;
+              
+         img{
+        
+            
+
+             height: 600px;
+         }
+     }
+     .preview{
+      
+         flex:1;
+         height: 250px;
+        display: flex;
+          align-content: stretch;
+             flex-wrap: wrap;
+             position: relative;
+             bottom: 0;
+            
+         img{
+             
+                   border: 1px solid #a3a3a3;
+             display: block;
+           
+              width: 80px;
+             height:70px;
+              transition: width 1s,height 1s;
+              
+             &:hover{
+            
+                 width: 90px;
+                 height: 90px;
+                 left: -20px;
+                 
+               
+             }
+         }
+     }
+      }
+}

@@ -141,7 +141,7 @@ left: 31px;
         &[name="search"]{
            right: 59px;
            height: 16px;
-         width: 60px;
+         width: 0px;
            	visibility: hidden;
 	z-index: 300;
     transition:  1s ease-in-out;
@@ -170,9 +170,7 @@ left: 31px;
     } 
     input[name="search"]{
         visibility: visible;
-        -webkit-animation-name: searchAnimation;
-  animation-name: searchAnimation;
-  animation-duration: 1s;
+       width: 90px;
     }
     
 }

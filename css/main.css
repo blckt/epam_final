@@ -141,7 +141,7 @@ body {
   #wrapper header .right_side .search input[name="search"] {
     right: 59px;
     height: 16px;
-    width: 60px;
+    width: 0;
     visibility: hidden;
     z-index: 300;
     transition: 1s ease-in-out;
@@ -164,10 +164,7 @@ body {
   }
   #wrapper header .right_side .search:hover input[name="search"] {
     visibility: visible;
-    -webkit-animation-name: searchAnimation;
-    animation-name: searchAnimation;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    width: 90px;
   }
   #wrapper header .right_side .basket {
     font-family: latoBold;

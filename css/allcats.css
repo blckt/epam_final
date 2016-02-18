@@ -94,19 +94,3 @@
   width: 90%;
   height: 100%;
 }
-#all .breadcrumbs {
-  height: 40px;
-  width: 100%;
-  margin-top: 2%;
-  font-family: latoReg;
-}
-#all .breadcrumbs ul li {
-  display: inline-block;
-}
-#all .breadcrumbs ul li:not(:first-child):before {
-  content: '/ ';
-}
-#all .breadcrumbs ul li:not(:first-child) a {
-  position: relative;
-  left: 2%;
-}
