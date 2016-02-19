@@ -2,11 +2,10 @@
 //init page & history api
 (function () {
     getUrlState(null, getRoutes());
+    localStorageEventHandler(); 
 })();
 
-window.onhashchange = function () {
-    getUrlState(decodeURI(window.location.hash, null));
-}
+
 function getRoutes() {
 
     var url = window.location.href.replace(/https?:\/\/\S*:\d*\//, '');
@@ -20,7 +19,7 @@ function getUrlState(hash, routes) {
     if (hash) {
         hash = hash.replace('#', '');
         state = hash.split(/\//)[0];
-        console.log(hash.split(/\//));
+     
         if (hash.split(/\//).length > 1) {
             id = hash.split(/\//)[1];
         }
@@ -61,6 +60,11 @@ function getUrlState(hash, routes) {
 
             break;
         }
+        case 'basket':{
+            initContent('../../Views/basket.html').then(function () {
+                history.pushState({param:'value'},'','../basket');
+            })
+        }
         default: {
             initContent('../../Views/404.html').then(function () {
                 history.pushState({ param: 'value' }, '', '/404');
@@ -70,21 +74,21 @@ function getUrlState(hash, routes) {
     }
 }
 function initProductDetails(id) {
+    
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '../../Data/items.json', true);
+        xhr.open('GET', '../../Data/'+id+'.json', true);
         xhr.send();
         xhr.onreadystatechange = function () {
             if (xhr.readyState != 4) {
                 return;
             }
             else {
-                var items = JSON.parse(xhr.responseText).items;
-                items.forEach(function (element) {
-                    if (element.id == id) {
-                        resolve(element);
-                    }
-                })
+                var items = JSON.parse(xhr.responseText);
+             
+                        resolve(items);
+                    
+               
             }
         }
     });
@@ -95,17 +99,24 @@ function populateProductPage(object) {
     breadcrumbsWay.innerHTML=object.name;
     //main image
     document.querySelector("#Main-image").src=object.img[0];
+    document.querySelector("#Main-image").alt=object.colors[0];
+    
     //images for preview
     for(var i=1;i<object.img.length;i++){
         var img= document.createElement('img');
         img.src=object.img[i];
-        img.alt="Preview Image";
+        img.alt=object.colors[i];
+        
         img.onclick=function (e) {
           
             var main=document.querySelector("#Main-image");
             var temp=e.target.src;
+            var  tempAlt=e.target.alt;
             e.target.src=main.src;
             main.src=temp;
+            e.target.alt=main.alt;
+            main.alt=tempAlt;
+            
             
                     }
         var pr=document.querySelector('.preview');

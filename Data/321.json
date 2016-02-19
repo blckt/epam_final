@@ -1,0 +1,25 @@
+{
+    "article": "1231321",
+    "name": "Floral Plimsoll 2 ",
+    "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aut voluptates porro neque, consectetur ducimus aliquid totam repellendus ea fugit perferendis, expedita repellat dolor ut quo? Tempore debitis cupiditate nisi.",
+    "price": 99.5,
+    "size": [
+        38,
+        39,
+        40,
+        41,
+        42
+    ],
+    "img": [
+        "/img/images/123/371321801.jpg",
+        "/img/images/123/371321801D1.jpg",
+        "/img/images/123/371321801D2.jpg",
+        "/img/images/123/371321801D3.jpg"
+    ],
+    "colors": [
+        "yellow",
+        "black",
+        "green",
+        "white"
+    ]
+}
