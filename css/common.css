@@ -17,3 +17,65 @@ body {
 body nav {
   line-height: 1.4;
 }
+
+h3 {
+  font-size: 14px;
+  font-family: latoReg;
+  font-weight: bold;
+  text-align: left;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 1.16;
+  font-family: latoBold;
+  color: #303030;
+}
+
+h1 {
+  font-family: latoReg;
+  font-size: 69px;
+  line-height: 1.5;
+  color: #303030;
+}
+
+.subheader-big {
+  font-family: 'Georgia';
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+.subheader-small {
+  font-family: 'Georgia';
+  font-style: italic;
+  font-size: 18px;
+}
+
+.icon-list {
+  padding-top: 25px;
+}
+.icon-list span {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #a3a3a3;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.icon-list span:nth-child(n+2) {
+  margin-left: 15px;
+}
+.icon-list .twitter {
+  background-image: url("../img/twitter.png");
+}
+.icon-list .facebook {
+  background-image: url("../img/twitter.png");
+}
+.icon-list .instagram {
+  background-image: url("../img/twitter.png");
+}

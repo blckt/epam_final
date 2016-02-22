@@ -191,6 +191,9 @@
     background-color: #e67429;
     color: white;
   }
+  #main .container .inspiration {
+    margin-top: 150px;
+  }
 
   footer {
     padding-top: 32px;
