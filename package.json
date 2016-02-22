@@ -21,6 +21,7 @@
     "gulp-uglify": "^1.5.1"
   },
   "dependencies": {
-    "css-reset": "0.0.1"
+    "css-reset": "0.0.1",
+    "promise-polyfill": "^3.1.0"
   }
 }

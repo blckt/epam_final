@@ -71,6 +71,11 @@
   background-size: cover;
   margin: auto;
 }
+#all .itemlist .items .item div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 #all .itemlist .items .item:first-child div {
   background-image: url("../img/placeholder/1200x600.png");
   height: 35%;
@@ -88,20 +93,4 @@
   background-image: url("../img/placeholder/550x700.png");
   width: 90%;
   height: 100%;
-}
-#all .breadcrumbs {
-  height: 40px;
-  width: 100%;
-  margin-top: 2%;
-  font-family: latoReg;
-}
-#all .breadcrumbs ul li {
-  display: inline-block;
-}
-#all .breadcrumbs ul li:not(:first-child):before {
-  content: '/ ';
-}
-#all .breadcrumbs ul li:not(:first-child) a {
-  position: relative;
-  left: 2%;
 }

@@ -1,0 +1,99 @@
+#item{
+    #descr{
+           text-align: center;
+        margin-top: 70px;
+            div{
+                &:nth-child(4){
+                    width: 620px;
+                    margin: 50px auto;
+                }
+                h3{
+                    text-align: center;
+                }
+            }
+            input[type="button"]{
+                outline: none;
+                border: none;
+                width: 174px;
+                height: 53px;
+                font-family: latoReg;
+                font-size: 11px;
+                background-color: #f68236;
+               transition: background-color 1s;
+                &.added{
+                    background-color: limegreen;
+                }
+            }
+            
+            #sizes{
+                  margin: 40px 35%;
+         padding: 10px 0;
+            transition :border 1s;
+                input[type="radio"]{
+                    display: none;
+                }
+                label{
+                    display: inline-block;
+                    margin: 0 10px;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid black;
+                    line-height: 40px;
+                }
+                input[type="radio"]:checked + label{
+                    background-color: lightgray;
+                }
+            }
+    }
+    .images{
+       
+        width: 80%;
+        margin: auto;
+        height: 600px;
+        display: flex;
+        align-content: flex-end;
+    
+        align-items: flex-end;
+     .main{
+ width: 85%;
+ margin-left: 10%;
+              min-width: 85%;
+              
+         img{
+        
+            
+
+             height: 600px;
+         }
+     }
+     .preview{
+      
+         flex:1;
+         height: 250px;
+        display: flex;
+          align-content: stretch;
+             flex-wrap: wrap;
+             position: relative;
+             bottom: 0;
+            
+         img{
+             
+                   border: 1px solid #a3a3a3;
+             display: block;
+           
+              width: 80px;
+             height:70px;
+              transition: width 1s,height 1s;
+              
+             &:hover{
+            
+                 width: 90px;
+                 height: 90px;
+                 left: -20px;
+                 
+               
+             }
+         }
+     }
+      }
+}

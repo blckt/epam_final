@@ -2,9 +2,7 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     cssnano = require('gulp-cssnano'),
-    jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
@@ -34,7 +32,7 @@ browserSync.use(spa({
     // If your application already provides fallback urls (such as an existing proxy server),
     // this value can be set to false to omit using the connect-history-api-fallback middleware entirely.
     history: {
-        index: '/index.html'
+        index: '../index.html'
     }
 }));
 gulp.task('watch',['styles'],function () {
@@ -42,7 +40,7 @@ gulp.task('watch',['styles'],function () {
 
     browserSync.init({
         server: {
-            baseDir:'.',
+            baseDir:'./',
             port:8081
         },
         port:8081

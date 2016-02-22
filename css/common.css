@@ -1,81 +1,42 @@
-@font-face {
-  font-family: latoReg;
-  src: url(../fonts/lato/Lato-Regular.ttf);
-}
-@font-face {
-  font-family: latoBold;
-  src: url(../fonts/lato/Lato-Bold.ttf);
-}
-body {
-  overflow-x: hidden;
-}
+/*
+Error: Invalid CSS after "...e396d67577d4f79": expected "{", was ""
+        on line 119 of src/styles/common.scss
 
-@font-face {
-  font-family: latoItalic;
-  src: url(../fonts/lato/Lato-Italic.ttf);
-}
-body nav {
-  line-height: 1.4;
-}
+114:         width: 100%;
+115:         margin-top:2%;
+116:         font-family:latoReg;
+117:     }
+118: >>>>>>> 65c5a33ff4222d3e1f6005c96e396d67577d4f79
 
-h3 {
-  font-size: 14px;
-  font-family: latoReg;
-  font-weight: bold;
-  text-align: left;
-}
-
-h2 {
-  font-size: 34px;
-  line-height: 1.16;
-  font-family: latoBold;
-  color: #303030;
-}
-
-h1 {
-  font-family: latoReg;
-  font-size: 69px;
-  line-height: 1.5;
-  color: #303030;
-}
-
-.subheader-big {
-  font-family: 'Georgia';
-  font-style: italic;
-  font-size: 24px;
-  line-height: 1.45;
-}
-
-.subheader-small {
-  font-family: 'Georgia';
-  font-style: italic;
-  font-size: 18px;
-}
-
-.icon-list {
-  padding-top: 25px;
-}
-.icon-list span {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  border: 2px solid #a3a3a3;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 16px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.icon-list span:nth-child(n+2) {
-  margin-left: 15px;
-}
-.icon-list .twitter {
-  background-image: url("../img/twitter.png");
-}
-.icon-list .facebook {
-  background-image: url("../img/twitter.png");
-}
-.icon-list .instagram {
-  background-image: url("../img/twitter.png");
-}
+Backtrace:
+src/styles/common.scss:119
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1115:in `expected'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1110:in `tok!'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:654:in `block'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:647:in `ruleset'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:673:in `block_child'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:666:in `block_contents'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:123:in `stylesheet'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:39:in `parse'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/engine.rb:403:in `_to_tree'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/engine.rb:278:in `render'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin.rb:82:in `update_stylesheets'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:363:in `watch_or_update'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.21/bin/sass:13:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.0/bin/sass:23:in `load'
+/usr/local/rvm/gems/ruby-2.3.0/bin/sass:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...e396d67577d4f79\": expected \"{\", was \"\"\A         on line 119 of src/styles/common.scss\A \A 114:         width: 100%;\A 115:         margin-top:2%;\A 116:         font-family:latoReg;\A 117:     }\A 118: >>>>>>> 65c5a33ff4222d3e1f6005c96e396d67577d4f79"; }

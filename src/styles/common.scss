@@ -14,6 +14,11 @@ body{
     font-family: latoItalic;
     src: url(../fonts/lato/Lato-Italic.ttf)
 }
+.error{
+    border: 1px solid red;
+    transition: border 2s;
+
+}
 body{
 
 	
@@ -21,6 +26,7 @@ body{
 		line-height: 1.4;
 	}
 }
+<<<<<<< HEAD
 
 h3{
     font-size: 14px;
@@ -85,3 +91,28 @@ h1{
             }
           
         }
+=======
+ .breadcrumbs{
+        
+        ul{
+        
+           li{
+                display:inline-block;
+                &:not(:first-child){
+                &:before{
+                    content:'/ ';
+                    
+                }
+                a{
+                    position:relative;
+                    left:2%;
+                }
+            } 
+           }
+        }
+        height: 40px;
+        width: 100%;
+        margin-top:2%;
+        font-family:latoReg;
+    }
+>>>>>>> 65c5a33ff4222d3e1f6005c96e396d67577d4f79
