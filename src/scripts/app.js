@@ -60,6 +60,64 @@ function localStorageEventHandler() {
 
 
 //pageWorker
+
+function populateProductPage(object) {
+    var breadcrumbsWay=document.querySelector('.breadcrumbs ul li:last-child a');
+    breadcrumbsWay.href="#pdp/"+object.id;
+    breadcrumbsWay.innerHTML=object.name;
+    //main image
+    document.querySelector("#Main-image").src=object.img[0];
+    document.querySelector("#Main-image").alt=object.colors[0];
+    
+    //images for preview
+    for(var i=1;i<object.img.length;i++){
+        var img= document.createElement('img');
+        img.src=object.img[i];
+        img.alt=object.colors[i];
+        
+        img.onclick=function (e) {
+          
+            var main=document.querySelector("#Main-image");
+            var temp=e.target.src;
+            var  tempAlt=e.target.alt;
+            e.target.src=main.src;
+            main.src=temp;
+            e.target.alt=main.alt;
+            main.alt=tempAlt;
+            
+            
+                    }
+        var pr=document.querySelector('.preview');
+           pr.appendChild(img);
+    }
+    //populate description
+    var details=document.querySelector('#descr');
+    var h2=details.querySelector('div h2');
+    h2.innerHTML=object.name.toUpperCase()
+    //article
+    details.querySelector(':nth-child(2)').innerHTML="Article number : "+object.article;
+    //price
+    details.querySelector(':nth-child(3)').innerHTML="&#8364; "+object.price;
+  //description
+        details.querySelector(':nth-child(4)').innerHTML=object.descr;
+       //sizes
+       for(var i=0;i<object.size.length;i++){
+            //.innerHTML=object.size[0];
+          var input=document.createElement('input');
+          input.type="radio";
+          input.name="size";
+          input.value=object.size[i];
+          input.id="size"+object.size[i];
+           var label=document.createElement('label');
+           label.htmlFor="size"+object.size[i];
+           label.innerHTML=object.size[i];
+        var sizes=document.querySelector('#sizes');
+         sizes.appendChild(input);
+         sizes.appendChild(label);
+       }
+    
+    }
+    
 function pdpInit() {
     var btn = document.querySelector('#descr div input[type="button"]');
     function pdpDetailsCollector() {
